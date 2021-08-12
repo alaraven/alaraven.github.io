@@ -1,0 +1,397 @@
+/*STYLE LIGHT*/
+/* Share Tech Mono - Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
+.crosshair { cursor: crosshair; }
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html {
+    font-size: 10px;
+    font-family: 'Share Tech Mono', monospace;
+}
+a {
+    text-decoration: none;
+}
+.container {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+p {
+    color: grey;
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+    font-size: 1.3rem;
+    font-weight: 100;
+    letter-spacing: .1rem;
+    line-height: 1.5rem;
+}
+.section-title {
+    font-size: 4rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: .2rem;
+    text-align: center;
+}
+h2 {
+    font-size: 2.2rem;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+.cta {
+    display: inline-block;
+    padding: 10px 15px;
+    color: black;
+    background-color: transparent;
+    border: 2px solid white;
+    border-radius: 25px;
+    text-transform: uppercase;
+    margin-top: 30px;
+    font-size: 1.5rem;
+    transition: .5s ease;
+    transition-property: background-color, color;
+}
+.cta:hover {
+    color: white;
+    background-color: rgba(0, 0, 0, .2);
+}
+
+/* Background Video */
+body {
+    z-index: -1;
+    background-color: white;
+    color: black;
+}
+#videoBG {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -2;
+    opacity: 33%;
+  }
+/* End Background Video */
+
+/* Hero Section */
+#hero {
+    position: relative;
+}
+#hero h1 {
+    display: block;
+    width: fit-content;
+    position: relative;
+    color: transparent;
+    animation: text_reveal 1s ease forwards;
+    animation-delay: 1.5s;
+}
+#hero h1 span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0;
+    background-color: rgba(255, 255, 255, 0.3);
+    animation: text_reveal_box 1s ease;
+    animation-delay: 1s;
+}
+/* Typing Effect */
+.line {
+    position: relative;
+    top: 50%;
+    width: 16em;
+    margin: 0 auto;
+    border-right: 2px solid rgba(0,0,0,.75);
+    font-size: 200%;
+    white-space: nowrap;
+    overflow: hidden;
+    transform: translateY(-50%);
+    z-index: -1;
+}
+.anim-typewriter {
+    animation: typewriter 4s steps(9) 1s 1 normal both, blinkTextCursor 500ms steps(9) infinite normal;
+    color: black;
+    font-family: 'Share Tech Mono', monospace;
+}
+/* End Typing Effect */
+/* Down Arrows */
+.arrow,.arrow:before {
+  position: absolute;
+  left: 50%;
+}
+.arrow {
+  width: 40px;
+  height: 40px;
+  top: 75%;
+  margin: -20px 0 0 -20px;
+  -webkit-transform: rotate(45deg);
+  border-left: none;
+  border-top: none;
+  border-right: 2px #fff solid;
+  border-bottom: 2px #fff solid;
+}
+.arrow:before {
+  content: '';
+  width: 20px;
+  height: 20px;
+  top: 50%;
+  margin: -10px 0 0 -10px;
+  border-left: none;
+  border-top: none;
+  border-right: 1px #fff solid;
+  border-bottom: 1px #fff solid;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-name: arrow;
+}
+/* End Down Arrows */
+/* End Hero Section */
+
+/* Services Section */
+#services .services {
+    flex-direction: column;
+    text-align: center;
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 100px 0;
+}
+#services .service-top p {
+    padding: 30px;
+    margin-left: 17%;
+    margin-right: 17%;
+}
+#services .service-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    max-width: 75%;
+}
+#services .service-item {
+    flex-basis: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 30px;
+    border-radius: 10px;
+    background-color: rgba(255,255,255,.2);
+    background-size: cover;
+    margin: 10px 5%;
+}
+#services .service-bottom .icon {
+    margin-bottom: 10px;
+}
+/* End Services Section */
+
+/* Process Section */
+#process .process {
+    flex-direction: column;
+    text-align: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 100px 20px;
+}
+#process h1 {
+    padding: 1em;
+}
+#process h3 {
+    padding-top: 1em;
+    text-transform: uppercase;
+}
+#process .timeline {
+    text-align: center;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-bottom: 100px;
+}
+#process a {
+    padding-top: 1em;
+}
+/* End Process Section */
+
+/* Projects Section */
+#projects .projects {
+    flex-direction: column;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 100px 0;
+}
+#projects .projects-header h1 {
+    margin-bottom: 50px;
+}
+#projects .all-projects {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+#projects .project-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 80%;
+    margin: 20px auto;
+    overflow: hidden;
+    border-radius: 10px;
+    max-width: 700px;
+}
+#projects .project-info {
+    padding: 30px;
+    flex-basis: 50%;
+    background-color: rgba(255, 255, 255, 0.3);
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+#projects .project-img {
+    flex-basis: 50%;
+    height: 300px;
+    overflow: hidden;
+    position: relative;
+}
+#projects .project-img:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: white;
+    opacity: .5;
+}
+#projects img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+#projects .project-img img {
+    transition: .5s ease transform;
+}
+#projects .project-img:hover img {
+    transform: scale(1.1);
+}
+/* End Projects Section */
+
+/* Connect Section */
+div.connect img {
+    opacity: 22%;
+}
+div.connect img:hover {
+    opacity: 100%;
+    -webkit-animation: fadeIn 1.5s;
+}
+/* Popup container */
+.popup {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+  }
+  /* The actual popup (appears on top) */
+  .popup .popuptext {
+    visibility: hidden;
+    width: 160px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 8px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 30%;
+    left: 50%;
+    margin-left: 30px;
+  }
+  /* Popup arrow */
+  .popup .popuptext::after {
+    content: "";
+    position: absolute;
+    top: 40%;
+    left: -3%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent #555 transparent transparent;
+  }
+  /* Toggle this class when clicking on the popup container (hide and show the popup) */
+  .popup .show {
+    visibility: visible;
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s;
+  }
+  /* Connect Links Faded Bottom Line and Scroll with Page */
+  div.connect div {
+    padding: 2em;
+}
+    div.connect {
+        position: fixed;
+        bottom: 20px;
+    }
+/* End Connect Section */
+
+/* Keyframes */
+/* Text Reveal */
+@keyframes text_reveal_box{
+    50% {
+        width: 100%;
+        left: 0;
+    } 100% {
+        width: 0;
+        left: 100%;
+    }
+}
+@keyframes text_reveal{
+    100% {
+        color: black;
+    }
+}
+/* TypeWriter */
+@keyframes typewriter {
+    from {
+        width: 0;
+    }
+    to {
+        width: 5.5em;
+    }
+}
+@keyframes blinkTextCursor {
+    from {
+        border-right-color: rgba(0,0,0,.75);
+    }
+    to {
+        border-right-color: transparent;
+    }
+}
+/* Down Arrows */
+@keyframes arrow {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+      transform: translate(-10px, -10px);
+    }
+  }
+/* Pop-Up Connect */
+  /* Add animation (fade in the popup) */
+  @-webkit-keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+  }
+  @keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+  }
+/* End Keyframes */
